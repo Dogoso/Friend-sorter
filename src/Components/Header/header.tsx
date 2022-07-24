@@ -2,7 +2,7 @@ import styles from "./header.module.css"
 
 const Header = () => {
     return (
-        <header className={styles.bg}>
+        <header className={styles.header}>
             <div className={styles.margin}>
                 <img 
                     src="src/imgs/logo.png" 

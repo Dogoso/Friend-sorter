@@ -4,12 +4,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import Formulario from './Components/Formulario/formulario';
 import Header from 'Components/Header/header';
+import Main from 'Components/Main/main';
 
 function App() {
   return (
       <>
         <Header />
-        <main>
+        <Main>
           <BrowserRouter>
             <RecoilRoot>
               <Routes>
@@ -17,7 +18,7 @@ function App() {
               </Routes>
             </RecoilRoot>
           </BrowserRouter>
-        </main>
+        </Main>
       </>
   );
 }
