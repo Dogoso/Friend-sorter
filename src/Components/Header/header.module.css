@@ -1,0 +1,29 @@
+.bg {
+    background-color: #4B69FD;
+    display: flex;
+    padding: 50px 50px 0px 50px;
+    justify-content: center;
+}
+
+.margin {
+    margin-top: 50px;
+}
+
+.participante {
+    position: relative;
+    top: 35px;
+}
+@media only screen and (max-width: 767px) {
+    .img {
+        width: 100%;
+    }
+    .bg {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .participante {
+        top: 30px;
+    }
+}
