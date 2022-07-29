@@ -1,3 +1,10 @@
 .container {
-    margin: 50px;
+    background-color: #FFF9EB;
+    border: 2px solid black;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    min-height: 100vh;
+    padding: 90px 50px 50px 50px;
+    position: relative;
+    top: -60px;
 }
