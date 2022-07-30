@@ -5,6 +5,7 @@ import { RecoilRoot } from 'recoil';
 import Formulario from './Components/Formulario/formulario';
 import Header from 'Components/Header/header';
 import Main from 'Components/Main/main';
+import Footer from 'Components/Footer/footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
               <Routes>
                 <Route path='/' element={<Formulario/>} />
               </Routes>
+              <Footer />
             </RecoilRoot>
           </BrowserRouter>
         </Main>

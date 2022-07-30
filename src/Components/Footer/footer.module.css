@@ -1,0 +1,33 @@
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button {
+    background-color: #FE652B;
+    color: white;
+    border-radius: 40px;
+    width: 400px;
+    height: 80px;
+    font-size: 20px;
+    font-weight: bold;
+
+    border-top: 2px solid black;
+    border-right: 6px solid black;
+    border-bottom: 6px solid black;
+    border-left: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: #e23f22;
+    cursor: pointer;
+}
+
+.start {
+    margin-left: 10px;
+}

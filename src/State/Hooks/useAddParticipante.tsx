@@ -3,9 +3,9 @@ import { participantes } from "State/atom"
 import useErrorMessage from "./useErrorMessage"
 
 const useAdicionarParticipante = () => {
-    const [particpantesList ,setParticipantes] = useRecoilState<String[]>(participantes)
+    const [particpantesList ,setParticipantes] = useRecoilState<string[]>(participantes)
     const setErrorMessage = useErrorMessage()
-    return (participante: String) => {
+    return (participante: string) => {
         if(!particpantesList.includes(participante)) {
             setParticipantes(backParticipantes => [...backParticipantes, participante])
         } else {

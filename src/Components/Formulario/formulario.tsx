@@ -18,12 +18,13 @@ const Formulario = () => {
     }
 
     return (
-        <>
+        <section>
             {errorMessage && 
                 <p role="errorMessage" className={styles.error}>
                     {errorMessage}
                 </p>
             }
+            <p>Vamos começar!</p>
             <form onSubmit={participanteFormSubmit}>
                 <input 
                     ref={participanteInputRef}
@@ -36,7 +37,7 @@ const Formulario = () => {
                     Adicionar
                 </button>
             </form>
-        </>
+        </section>
     )
 }
 
