@@ -3,6 +3,7 @@ import Footer from "Components/Footer/footer"
 import React from "react"
 import { RecoilRoot } from "recoil"
 import { useGetParticipantes } from "State/Hooks/useGetParticipantes"
+import { useSorter } from "State/Hooks/useSorter"
 
 jest.mock("State/Hooks/useGetParticipantes")
 
@@ -10,6 +11,12 @@ const mockNavigate = jest.fn()
 jest.mock("react-router-dom", () => {
     return {
         useNavigate: () => mockNavigate
+    }
+})
+const mockUseSorter = jest.fn()
+jest.mock("State/Hooks/useSorter", () => {
+    return {
+        useSorter: () => mockUseSorter
     }
 })
 
@@ -52,5 +59,6 @@ describe("Quando a lista estiver pronta", () => {
         fireEvent.click(button)
         expect(mockNavigate).toBeCalledTimes(1)
         expect(mockNavigate).toBeCalledWith('/sorteio')
+        expect(mockUseSorter).toBeCalledTimes(1)
     })
 })

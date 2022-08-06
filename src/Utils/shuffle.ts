@@ -1,0 +1,1 @@
+export const shuffle = (array: Array<any>) => [...array].sort(() => (Math.random() + 1) - (Math.random() + 1))

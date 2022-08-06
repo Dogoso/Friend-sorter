@@ -1,13 +1,16 @@
 import { useNavigate } from "react-router-dom"
 import { useGetParticipantes } from "State/Hooks/useGetParticipantes"
-import styles from "./footer.module.css"
+import { useSorter } from "State/Hooks/useSorter"
+import styles from "Styles/_globals.module.css"
 
 const Footer = () => {
 
     const listaParticipantes = useGetParticipantes()
     const navigate = useNavigate()
+    const sortear = useSorter()
 
     const startPlaying = () => {
+        sortear()
         navigate("/sorteio")
     }
 

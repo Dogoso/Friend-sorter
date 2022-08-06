@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react"
+import { Outlet } from "react-router-dom"
 import useAdicionarParticipante from "State/Hooks/useAddParticipante"
 import useGetErrorMessage from "State/Hooks/useGetErrorMessage"
-import styles from "./formulario.module.css"
+import styles from "Styles/_globals.module.css"
 
 const Formulario = () => {
 
@@ -24,19 +25,29 @@ const Formulario = () => {
                     {errorMessage}
                 </p>
             }
-            <p>Vamos começar!</p>
-            <form onSubmit={participanteFormSubmit}>
+            <h1 className={styles.title}>
+                Vamos começar!
+            </h1>
+            <form onSubmit={participanteFormSubmit} className={styles.form}>
                 <input 
                     ref={participanteInputRef}
+                    className={styles.input}
                     type="text" 
                     placeholder="Insira os nomes dos participantes"
                     value={participante}
                     onChange={(e) => setParticipante(e.target.value)}
                 />
-                <button type="submit" disabled={!participante}>
+                <button 
+                    className={styles.add}
+                    type="submit" 
+                    disabled={!participante}
+                >
                     Adicionar
                 </button>
             </form>
+            <div>
+                <Outlet/>
+            </div>
         </section>
     )
 }

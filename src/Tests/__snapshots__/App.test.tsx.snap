@@ -28,19 +28,29 @@ exports[`Renderização da página principal Quando acessada 1`] = `
     class="container"
   >
     <section>
-      <form>
+      <h1
+        class="title"
+      >
+        Vamos começar!
+      </h1>
+      <form
+        class="form"
+      >
         <input
+          class="input"
           placeholder="Insira os nomes dos participantes"
           type="text"
           value=""
         />
         <button
+          class="add"
           disabled=""
           type="submit"
         >
           Adicionar
         </button>
       </form>
+      <div />
     </section>
   </main>
 </div>

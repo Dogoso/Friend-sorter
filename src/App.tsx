@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
-import Formulario from './Components/Formulario/formulario';
 import Header from 'Components/Header/header';
 import Main from 'Components/Main/main';
-import Footer from 'Components/Footer/footer';
+import Sorteio from 'Components/Sorteio/sorteio';
+import Index from 'Pages/index';
 
 function App() {
   return (
@@ -15,9 +15,9 @@ function App() {
           <BrowserRouter>
             <RecoilRoot>
               <Routes>
-                <Route path='/' element={<Formulario/>} />
+                <Route path='/' element={<Index/>} />
+                <Route path='/sorteio' element={<Sorteio />}/>
               </Routes>
-              <Footer />
             </RecoilRoot>
           </BrowserRouter>
         </Main>
